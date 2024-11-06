@@ -1,0 +1,288 @@
+/* Estilo Global */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(to right, #ffffff, #e9e8e8);
+    color: #fff; 
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Cabeçalho */
+header {
+    background: linear-gradient(135deg, #130031, #00a7b3); 
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.5);
+    height: 20px;
+}
+
+header h1 {
+    position: relative;
+    right: 460px;
+    margin: 0;
+    font-size: 2.0em;
+    letter-spacing: 2px;
+}
+
+/* Container de Erro */
+#erro-container {
+    text-align: center;
+    color: #ff4d4d;
+    margin: 20px 0;
+}
+
+/* Container de Produtos */
+#produtos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    flex: 1; 
+}
+
+/* Estilo de Produto */
+.produto {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background: rgb(2, 0, 37); 
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 15px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.6);
+    margin: 15px;
+    padding: 15px;
+    width: 300px;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.produto:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0 16px 40px rgba(0, 0, 0, 0.7);
+}
+
+/* Estilo da Imagem do Produto */
+.produto-imagem {
+    width: 100%;
+    height: 360px;
+    border-radius: 15px;
+    filter: brightness(1.2); 
+    transition: filter 0.3s ease;
+}
+
+
+.produto:hover .produto-imagem {
+    filter: grayscale(100%); 
+}
+
+/* Títulos e Parágrafos */
+h2 {
+    font-size: 1.5em;
+    color: #7ecfa8; 
+    margin: 10px 0;
+}
+
+p {
+    font-size: 1.1em;
+    color: #d7dadb; 
+}
+
+/* Botão de Compra */
+button {
+    background: linear-gradient(135deg, #1c2c41, #00a7b3); 
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    font-size: 1em;
+    padding: 10px 15px;
+    transition: background 0.3s, transform 0.3s;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:hover {
+    background: linear-gradient(135deg, #00a7b3, #1c2c41); 
+    transform: scale(1.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3)
+}
+
+
+
+
+nav ul {
+    position: relative;
+    top: -40px;
+    margin-left: 850px;
+    list-style: none; 
+    display: flex; 
+    justify-content: center; 
+    padding: 0; 
+}
+
+nav ul li {
+    margin: 0 15px; 
+}
+
+nav ul li a {
+    color: white; 
+    text-decoration: none;
+    padding: 10px 15px; 
+    border-radius: 5px; 
+    transition: background 0.3s ease; 
+}
+
+nav ul li a:hover {
+    background: rgba(255, 255, 255, 0.2); 
+}
+
+main {
+    padding: 20px; 
+    text-align: center; 
+}
+
+
+
+/* Estilos para o Modal */
+
+
+#modal-caracteristicas {
+    position: fixed; 
+    z-index: 1000; 
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    width: 90%;  
+    max-width: 500px; 
+    height: auto; 
+    max-height: 80%; 
+    background-color: rgb(255, 255, 255); 
+    display: flex; 
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center; 
+    padding: 20px; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px; 
+    overflow-y: auto; 
+    box-sizing: border-box; 
+}
+
+.modal-content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-content button {
+    margin-top: 20px;
+    background-color: #28a745; 
+    color: white; 
+    padding: 10px 15px;
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-size: 16px; 
+}
+
+/* Efeito de hover no botão de confirmar */
+.modal-content button:hover {
+    background-color: #218838; 
+}
+
+/* Fechar o Modal */
+.fechar-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 24px;
+    color: red;
+    cursor: pointer;
+}
+
+/* Estilos dos labels */
+label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold; 
+}
+
+/* Estilos dos selects */
+select {
+    width: 100%; 
+    padding: 10px; 
+    margin-bottom: 20px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    font-size: 16px; 
+}
+
+/* Estilos do botão de confirmar compra */
+#confirmar-compra {
+    background-color: #28a745; 
+    color: white; 
+    padding: 10px 15px;
+    border: none; 
+    border-radius: 4px; 
+    cursor: pointer; 
+    font-size: 16px; 
+}
+
+/* Efeito de hover no botão de confirmar */
+#confirmar-compra:hover {
+    background-color: #218838; 
+}
+
+
+
+
+
+form {
+    display: flex; 
+    flex-direction: column; 
+}
+
+label {
+    margin: 10px 0 5px; 
+}
+
+input, textarea {
+    padding: 10px; 
+    border: 1px solid #ccc; 
+    border-radius: 4px; 
+    margin-bottom: 15px; 
+}
+
+
+
+
+
+
+
+
+
+/* Rodapé */
+footer {
+    background: linear-gradient(135deg, #130031, #00a7b3); 
+    color: white;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Media Queries para Responsividade */
+@media (max-width: 768px) {
+    #produtos {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .produto {
+        width: 90%;
+    }
+}
